@@ -1,17 +1,55 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity, Image } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
+  console.log();
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>HomeScreen</Text>
-      <Button title="Layout" onPress={() => navigation.navigate('Layout')} />
+      <Button 
+        onPress={() => navigation.navigate('Component')}
+        title='Go to Component Screen'
+        />
+        <Button 
+        onPress={() => navigation.navigate('List')}
+        title='Go to List Screen'
+        />
+        <Button 
+        onPress={() => navigation.navigate('Image')}
+        title='Go to Image Screen'
+        />
+        <Button 
+        onPress={() => navigation.navigate('Box')}
+        title='Go to Box Screen'
+        />
+        <Button 
+          onPress={() => navigation.navigate('Counter')}
+          title='Go to Counter Screen'
+        />
+      {/* <TouchableOpacity
+        onPress={() => props.navigation.navigate('List')}>
+        <Text>Go to List Demo</Text>
+      </TouchableOpacity> */}
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 30
+  }
+});
+
 HomeScreen.navigationOptions = {
-  title: 'Home'
-};
+  headerTitle: ( /* Your custom header */
+    <View
+      style={{
+        height: 60,
+        marginTop: 20 /* only for IOS to give StatusBar Space */
+      }}
+    >
+      <Text>Hello</Text>
+    </View>
+  )
+}
 
 export default HomeScreen;
