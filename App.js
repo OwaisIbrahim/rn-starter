@@ -5,6 +5,7 @@ import ListScreen from './src/screens/ListScreen';
 import ImageScreen from './src/screens/ImageScreen';
 import BoxScreen from './src/screens/BoxScreen';
 import CounterScreen from './src/screens/CounterScreen';
+import ColorScreen from './src/screens/ColorScreen';
 
 const navigator = createStackNavigator(
   {
@@ -13,17 +14,18 @@ const navigator = createStackNavigator(
     List: ListScreen,
     Image: ImageScreen,
     Box: BoxScreen,
-    Counter: CounterScreen
+    Counter: CounterScreen,
+    Color: ColorScreen,
   },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
       title: 'App',
       headerStyle: {
-        backgroundColor: '#f4511e',
+        backgroundColor: '#fff',
         
       },
-      headerTintColor: '#fff',
+      headerTintColor: '#000',
       headerTitleStyle: {
         fontWeight: 'bold',
       },

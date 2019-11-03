@@ -25,6 +25,10 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate('Counter')}
           title='Go to Counter Screen'
         />
+        <Button 
+          onPress={() => navigation.navigate('Color')}
+          title='Go to Color Screen'
+        />
       {/* <TouchableOpacity
         onPress={() => props.navigation.navigate('List')}>
         <Text>Go to List Demo</Text>
@@ -39,17 +43,17 @@ const styles = StyleSheet.create({
   }
 });
 
-HomeScreen.navigationOptions = {
-  headerTitle: ( /* Your custom header */
-    <View
-      style={{
-        height: 60,
-        marginTop: 20 /* only for IOS to give StatusBar Space */
-      }}
-    >
-      <Text>Hello</Text>
-    </View>
-  )
-}
+// HomeScreen.navigationOptions = {
+//   headerTitle: ( /* Your custom header */
+//     <View
+//       style={{
+//         height: 60,
+//         marginTop: 20 /* only for IOS to give StatusBar Space */
+//       }}
+//     >
+//       <Text>Hello</Text>
+//     </View>
+//   )
+// }
 
 export default HomeScreen;
