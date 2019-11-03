@@ -27,7 +27,6 @@ const SquareScreen = () => {
                 return;
         }
     }
-
     return (
         <View>
             <ColorCounter 
