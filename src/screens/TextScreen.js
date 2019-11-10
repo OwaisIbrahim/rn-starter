@@ -7,7 +7,7 @@ const TextScreen = () => {
     return (
         <View style={styles.container}>
             <View>
-                <Text>Enter Name:</Text>
+                <Text style={styles.labelStyle}>Enter Name:</Text>
                 <TextInput 
                     placeholder='Username'
                     style={styles.input}
@@ -18,8 +18,9 @@ const TextScreen = () => {
                 />
                 <Text>My name is {name}</Text>
             </View>
+            <View style={styles.separater}></View>
             <View>
-                <Text>Enter Password:</Text>
+                <Text style={styles.labelStyle}>Enter Password:</Text>
                 <TextInput 
                     placeholder='Password'
                     secureTextEntry
@@ -43,6 +44,10 @@ const styles = StyleSheet.create({
     container: {
         padding: 15,
     },
+    labelStyle: {
+        fontSize: 16
+,        fontWeight: '500'
+    },  
     input: {
         marginVertical: 12,
         paddingHorizontal: 12,
@@ -50,6 +55,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#e0e0e0',
         elevation: 2,
+    },
+    separater: {
+        marginVertical: 12
     }
 });
 
